@@ -1,7 +1,5 @@
 // create a program with a variable and a pointer and print the address of that variable.
 #include <stdio.h>
-/// @brief 
-/// @return 
 int main()
 {
 int tway = 100;
