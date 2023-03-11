@@ -1,4 +1,4 @@
-#include <stdio.h>
+:%s/\s\+$//g#include <stdio.h>
 void swap(int *a, int *b) // the swap function takes two integer pointers as arguments a and b.
 {
     *a = *a + *b; //  add the values pointed to by a and b, and store the result in *a.
