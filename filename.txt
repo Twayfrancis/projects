@@ -1,0 +1,17 @@
+Explaining the read_textfile function
+This code is a C function that reads a text file and prints it to the POSIX standard output.
+TL;DR
+This code defines a function that reads a text file and prints it to the standard output. It takes the filename and the number of letters to read as arguments. It returns the number of letters read or 0 on failure.
+
+Explanation
+The code defines a function called read_textfile that takes two arguments: filename and letters. The filename argument is a string that contains the name of the file to read, and letters is the number of letters to read from the file.
+
+The function first checks if the filename argument is not NULL. If it is NULL, the function returns 0. If it is not NULL, the function opens the file using the open system call and returns -1 if it fails to open the file.
+
+The function then allocates memory for a buffer using the malloc function. The size of the buffer is letters multiplied by the size of a char. If the malloc function fails to allocate memory, the function returns 0.
+
+The function then reads the file using the read system call and stores the data in the buffer. If the read function fails, the function frees the buffer and returns 0.
+
+The function then writes the data in the buffer to the standard output using the write system call. If the write function fails, the function frees the buffer and returns 0.
+
+Finally, the function frees the buffer, closes the file, and returns the number of bytes read.
